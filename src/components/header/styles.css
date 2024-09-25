@@ -1,0 +1,15 @@
+.Header-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: black;
+
+    .Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 92%;
+        height: 74px;
+    }
+}

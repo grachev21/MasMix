@@ -1,0 +1,25 @@
+.Logo {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    width: 110px;
+    cursor: pointer;
+    p {
+        color: aliceblue;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+        img {
+            filter: invert(100%);
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            margin-right: 4px;
+        }
+
+}
+
