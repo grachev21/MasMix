@@ -1,0 +1,13 @@
+.TrackExamples {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .images-track-example {
+    position: absolute;
+    z-index: -50;
+  }
+  .text {
+    color: var(--text-color-1);
+  }
+}

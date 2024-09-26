@@ -1,25 +1,13 @@
 .VideoBlock {
   min-height: 700px;
-  margin-top: 50px;
   margin-bottom: 50px;
   background-color: var(--background-color-3);
-  .title {
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 42px;
-  }
   .description {
     margin: 20px;
     display: flex;
     justify-content: center;
     font-weight: 400;
     font-size: 22px;
-  }
-  .icons {
-    margin: 40px;
-    display: flex;
-    justify-content: center;
   }
 
   .block-video {
@@ -37,26 +25,6 @@
       margin: 20px;
       .text {
         margin-top: 10px;
-      }
-
-      .link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        color: var(--text-color-1);
-        background-color: rgb(14, 197, 4);
-        border-radius: 30px;
-        padding: 20px;
-        text-align: center;
-        font-size: 22px;
-        margin-top: 20px;
-
-        svg {
-          width: 20px;
-          height: 20px;
-          margin-right: 10px;
-        }
       }
     }
   }
