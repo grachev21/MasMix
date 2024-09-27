@@ -2,7 +2,7 @@
 //import Track from "../components/track/Track";
 
 
-function ProjectPage() {
+const ProjectPage = () => {
   return (
     <div className="Project">
     </div>

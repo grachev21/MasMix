@@ -1,7 +1,7 @@
 import icon from "../../media/icons/Mixer.png"
 import "./styles.css";
 
-function DividingLine({ type }) {
+const DividingLine = ({ type }) => {
   return (
     <div className={"DividingLine " + type}>
       <div className="icons">

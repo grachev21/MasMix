@@ -1,7 +1,7 @@
 import "./styles.css";
 
 
-function Title({ color, text }) {
+const Title = ({ color, text }) => {
   return (
     <div className={"Title " + color}>
       {text}

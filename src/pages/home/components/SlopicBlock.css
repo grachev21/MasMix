@@ -8,6 +8,7 @@
     position: absolute;
     width: 100cm;
     height: 600px;
+    object-fit: cover;
   }
   .info-text {
     display: flex;

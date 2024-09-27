@@ -8,7 +8,7 @@ import Title from "../../../components/title/Title";
 
 
 
-function VideoBlock() {
+const VideoBlock = () => {
   return (
     <div className="VideoBlock">
       <Title type={"black"} text={"MasMix - услуги по микшированию и мастерингу онлайн"} />

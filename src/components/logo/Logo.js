@@ -3,7 +3,7 @@ import logo from "../../media/icons/Mixer.png"
 import { NavLink } from "react-router-dom";
 
 
-function Logo() {
+const Logo = () => {
   return (
     <NavLink to="/">
       <div className="Logo">

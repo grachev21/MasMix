@@ -1,0 +1,40 @@
+.SwitchTheme {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  position: relative;
+  height: 30px;
+  background-color: var(--background-color-3);
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+
+  .icons-day {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 5px;
+  }
+
+  .icons-night {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    right: 6px;
+  }
+  .ball {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: var(--background-color-1);
+    border-radius: 50%;
+    top: 1.2px;
+    left: 1.3px;
+    transition: 0.3s;
+    opacity: 70%;
+  }
+}

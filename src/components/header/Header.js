@@ -3,7 +3,7 @@ import Logo from "../logo/Logo";
 import Navbar from "../navbar/Navbar";
 import SwitchTheme from "../switch_theme/SwitchTheme";
 
-function Header() {
+const Header = () => {
   return (
     <div className="Header-block">
       <div className="Header limiter">

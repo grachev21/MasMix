@@ -1,7 +1,7 @@
 import "./styles.css";
 
 
-function Button({ type }) {
+const Button = ({ type }) => {
   return (
     <div className="Buttonsdf">
       <div className={"link " + type}>

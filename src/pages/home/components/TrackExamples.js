@@ -4,7 +4,7 @@ import DividingLine from "../../../components/dividing_line/DividingLine.js";
 import Title from "../../../components/title/Title.js";
 import Audio from "../../../components/audio/Audio.js";
 
-function TrackExamples() {
+const TrackExamples = () => {
   return (
     <div className="TrackExamples">
       <img className="images-track-example" src={images_track_example}></img>

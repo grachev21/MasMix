@@ -1,8 +1,9 @@
 import "./styles.css";
 
 import { NavLink } from "react-router-dom";
+import SwitchTheme from "../switch_theme/SwitchTheme";
 
-function Navbar() {
+const Navbar = () => {
   const activeLink = "active-link"
   const noactiveLink = "noactive-link"
   return (

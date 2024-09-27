@@ -4,7 +4,7 @@ import headerPhoto from "../../../media/images/HEADER-PHOTO.jpg";
 import icons_list from "../../../media/icons/achievement.png";
 import icons_logo from "../../../media/icons/Mixer.png";
 
-function SlopicBlock() {
+const SlopicBlock = () => {
   return (
     <div className="slopic-block">
       <img className="headerPhoto" src={headerPhoto} alt="" />
