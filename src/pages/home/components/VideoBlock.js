@@ -1,5 +1,5 @@
 import "./VideoBlock.css";
-import video from "../../../video/Mixing and mastering services online ｜ BROHOOD LAB.mp4";
+import video from "../../../media/video/Mixing and mastering services online ｜ BROHOOD LAB.mp4";
 import ReactPlayer from 'react-player/lazy'
 import React from 'react'
 import DividingLine from "../../../components/dividing_line/DividingLine";

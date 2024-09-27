@@ -6,7 +6,7 @@ function Navbar() {
   const activeLink = "active-link"
   const noactiveLink = "noactive-link"
   return (
-    <nav className="nav limiter">
+    <nav className="nav">
       <NavLink to="/" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
         ДОМ
       </NavLink>

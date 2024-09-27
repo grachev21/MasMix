@@ -1,8 +1,8 @@
 import "./SlopicBlock.css";
 
-import headerPhoto from "../../../img/images/HEADER-PHOTO.jpg";
-import icons_list from "../../../img/icons/achievement.png";
-import icons_logo from "../../../img/icons/Mixer.png";
+import headerPhoto from "../../../media/images/HEADER-PHOTO.jpg";
+import icons_list from "../../../media/icons/achievement.png";
+import icons_logo from "../../../media/icons/Mixer.png";
 
 function SlopicBlock() {
   return (

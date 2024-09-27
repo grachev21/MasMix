@@ -1,4 +1,4 @@
-import icon from "../../img/icons/Mixer.png";
+import icon from "../../media/icons/Mixer.png"
 import "./styles.css";
 
 function DividingLine({ type }) {
