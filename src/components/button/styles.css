@@ -20,5 +20,5 @@
 
 .green {
   color: var(--text-color-1);
-  background-color: #6db25f;
+  background-color: var(--burron-color-2);
 }

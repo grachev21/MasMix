@@ -11,13 +11,12 @@ import Title from "../../../components/title/Title";
 const VideoBlock = () => {
   return (
     <div className="VideoBlock">
-      <Title type={"black"} text={"MasMix - услуги по микшированию и мастерингу онлайн"} />
+      <Title text={"MasMix - услуги по микшированию и мастерингу онлайн"} />
 
       <div className="description">
         Ищете услуги по микшированию и мастерингу мирового класса?
       </div>
-      <DividingLine />
-
+      <DividingLine color={'white'} />
       <div className="block-video">
         <div className="video">
           <ReactPlayer

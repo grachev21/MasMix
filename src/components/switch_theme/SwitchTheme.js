@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import invertIcons from './Invert_no_invert';
 import day from '../../media/icons/day.png';
 import night from '../../media/icons/night.png';
 import './styles.css';
@@ -15,24 +16,31 @@ const SwitchTheme = () => {
 
     if (Dark === 'dark') {
       document.querySelector('html').classList.add('dark');
-      btnRef.current.setAttribute('style', 'background: black; left: 51px; transition: .3s;');
+      btnRef.current.classList.add('ball-white')
 
     } else {
       document.querySelector('html').classList.remove('dark');
-      btnRef.current.removeAttribute('style');
+      btnRef.current.classList.remove('ball-white');
     }
   }, [Dark]);
 
   const switchDayNight = () => {
     setDark(function(currentValue) {
-      return currentValue == 'light' ? 'dark' : 'light';
+      if (currentValue == 'light') {
+        invertIcons('dark')
+        return 'dark'
+      } else {
+        invertIcons('light')
+        return 'light'
+
+      }
     });
   };
 
   return (
     <button className='SwitchTheme' onClick={switchDayNight}>
-      <img className='icons-day' src={day} />
-      <img className='icons-night' src={night} />
+      <img className='icons-day dont-invert-icons' src={day} />
+      <img className='icons-night dont-invert-icons' src={night} />
       <div ref={btnRef} className='ball'></div>
     </button>
 

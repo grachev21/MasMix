@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: black;
+  background-color: var(--background-color-1);
   border-bottom: 0.1px solid var(--text-color-1);
 
   .Header {

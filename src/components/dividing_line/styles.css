@@ -9,21 +9,18 @@
   .icon {
     margin-left: 10px;
     margin-right: 10px;
+    filter: invert(100%);
   }
 
   .left-line {
     height: 1px;
     width: 156px;
-    background-color: var(--background-color-1);
+    background-color: var(--background-color-3);
   }
 
   .right-line {
     height: 1px;
     width: 156px;
-    background-color: var(--background-color-1);
+    background-color: var(--background-color-3);
   }
-}
-
-.invert {
-  filter: invert();
 }

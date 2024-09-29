@@ -1,12 +1,25 @@
 :root {
-    --text-color-1: rgb(255, 255, 255);
-    --text-color-2: rgb(67, 134, 235);
-    --text-color-3: rgb(0, 0, 0);
-    --background-color-1: rgb(0, 0, 0);
-    --background-color-2: rgb(37, 37, 37);
-    --background-color-3: rgb(255, 255, 255);
-    --button-color-1: rgb(3, 113, 216);
-    --button-color-2: rgb(74, 156, 78);
-    --button-color-3: red;
-    --hover-color-1: rgb(221, 221, 221);
+  --text-color-1: #ffffff;
+  --text-color-2: #4386eb;
+  --text-color-3: #000000;
+  --background-color-1: #000000;
+  --background-color-2: #252525;
+  --background-color-3: #ffffff;
+  --button-color-1: #0371d8;
+  --button-color-2: #4a9c4e;
+  --button-color-3: #dddddd;
+  --hover-color-1: #dddddd;
+}
+
+.dark {
+  --text-color-1: rgb(0, 0, 0);
+  --text-color-2: #4286eb;
+  --text-color-3: #ffffff;
+  --background-color-1: #ffffff;
+  --background-color-2: #a72aa3;
+  --background-color-3: #000000;
+  --button-color-1: #0371d8;
+  --button-color-2: #4a9c4e;
+  --button-color-3: #000000;
+  --hover-color-1: #000000;
 }

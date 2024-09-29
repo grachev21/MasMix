@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 const Logo = () => {
   return (
     <NavLink to="/">
-      <div className="Logo">
-        <p>Mas</p>
-        <img src={logo} alt="" />
+    <div className="Logo">
+<p>Mas</p>
+      <img className="logo invert-icons" src={logo} alt="" />
         <p>Mix</p>
       </div>
     </NavLink>

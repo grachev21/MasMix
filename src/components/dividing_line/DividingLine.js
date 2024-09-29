@@ -1,12 +1,12 @@
 import icon from "../../media/icons/Mixer.png"
 import "./styles.css";
 
-const DividingLine = ({ type }) => {
+const DividingLine = ({ color }) => {
   return (
-    <div className={"DividingLine " + type}>
+    <div className={"DividingLine " + color}>
       <div className="icons">
         <div className="left-line"></div>
-        <img className="icon" src={icon} alt="" />
+        <img className="icon invert-icons" src={icon} alt="" />
         <div className="right-line"></div>
       </div>
     </div>

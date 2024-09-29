@@ -7,12 +7,13 @@ import icons_logo from "../../../media/icons/Mixer.png";
 const SlopicBlock = () => {
   return (
     <div className="slopic-block">
+      <div className="slopic"></div>
       <img className="headerPhoto" src={headerPhoto} alt="" />
       <div className="info-text">
         <div className="text">
           <div className="Logo">
             <h1>Mas</h1>
-            <img className="icons-logo" src={icons_logo} alt="" />
+            <img className="icons-logo invert-icons" src={icons_logo} alt="" />
             <h1>Mix</h1>
           </div>
 
