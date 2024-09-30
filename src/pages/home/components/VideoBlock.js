@@ -16,7 +16,7 @@ const VideoBlock = () => {
       <div className="description">
         Ищете услуги по микшированию и мастерингу мирового класса?
       </div>
-      <DividingLine color={'white'} />
+      <DividingLine />
       <div className="block-video">
         <div className="video">
           <ReactPlayer
