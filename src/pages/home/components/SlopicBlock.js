@@ -23,19 +23,19 @@ const SlopicBlock = () => {
 
           <div className="list-achievements">
             <ul className="achievement">
-              <img className="icons_list" src={icons_list} alt="" />
+              <img className="icons_list dont-invert-icons" src={icons_list} alt="" />
               <p>Лучшие звукорежиссеры</p>
             </ul>
             <ul className="achievement">
-              <img className="icons_list" src={icons_list} alt="" />
+              <img className="icons_list dont-invert-icons" src={icons_list} alt="" />
               <p>Опыт более 10 лет</p>
             </ul>
             <ul className="achievement">
-              <img className="icons_list" src={icons_list} alt="" />
+              <img className="icons_list dont-invert-icons" src={icons_list} alt="" />
               <p>Опыт работы с гос заказами</p>
             </ul>
             <ul className="achievement">
-              <img className="icons_list" src={icons_list} alt="" />
+              <img className="icons_list dont-invert-icons" src={icons_list} alt="" />
               <p>Гарантия качества</p>
             </ul>
           </div>

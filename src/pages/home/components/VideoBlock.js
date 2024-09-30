@@ -3,8 +3,8 @@ import video from "../../../media/video/Mixing and mastering services online ｜
 import ReactPlayer from 'react-player/lazy'
 import React from 'react'
 import DividingLine from "../../../components/dividing_line/DividingLine";
-import Button from "../../../components/button/Button";
 import Title from "../../../components/title/Title";
+import ButtonGreen from "../../../components/button_green/ButtonGreen.js";
 
 
 
@@ -31,7 +31,7 @@ const VideoBlock = () => {
             Mas Mix- профессиональная студия микширования и мастеринга, имеющая в своем штате опытных инженеров и соответствующее оборудование.
             Мы окажем вам всю необходимую помощь, чтобы ваша песня или альбом звучали идеально.
           </div>
-          <Button type={"green"} />
+          <ButtonGreen />
         </div>
       </div>
     </div>

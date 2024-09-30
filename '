@@ -1,24 +1,28 @@
-.link {
+.ButtonGreen {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 250px;
   height: 54px;
-  color: var(--text-color-1);
+  color: white;
   border-radius: 30px;
   padding-top: 20px;
   padding-bottom: 24px;
   font-size: 20px;
   margin-top: 20px;
+  background-color: #6db25f;
 
-  svg {
-    width: 20px;
-    height: 20px;
+  img {
+    height: 22px;
+    width: 22px;
+    filter: invert(100%);
     margin-right: 10px;
+    margin-top: 1px;
   }
 }
 
-.green {
-  color: var(--text-color-1);
-  background-color: var(--burron-color-2);
+ButtonGreen:hover {
+  img {
+    margin-right: 20px;
+  }
 }
