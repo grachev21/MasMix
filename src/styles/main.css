@@ -117,3 +117,12 @@ body {
 .limiter {
   width: 1140px;
 }
+
+.filter-photo {
+  position: absolute;
+  width: 100cm;
+  height: 100%;
+  background-color: var(--background-color-1);
+  opacity: 60%;
+  z-index: -1;
+}

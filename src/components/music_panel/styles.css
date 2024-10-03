@@ -1,0 +1,54 @@
+.MusicPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 360px;
+  height: 100px;
+  background-color: var(--background-color-1);
+  border-radius: 20px;
+
+  .top-block {
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--text-color-1);
+  }
+  .bottom-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 36px;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .icon-play {
+      width: 36px;
+      height: 36px;
+    }
+
+    .before-after {
+      display: flex;
+      flex-direction: row;
+      color: var(--text-color-3);
+    }
+    .before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--background-color-3);
+      width: 132px;
+      height: 36px;
+      border-radius: 20px 0px 0px 20px;
+    }
+    .after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--background-color-3);
+      width: 132px;
+      height: 36px;
+      border-radius: 0px 20px 20px 0px;
+    }
+  }
+}

@@ -1,11 +1,16 @@
 .TrackExamples {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   position: relative;
+  height: 1110px;
 
   .images-track-example {
     position: absolute;
     z-index: -50;
+    height: 1110px;
+    width: 100%;
+    object-fit: cover;
   }
   .text {
     color: var(--text-color-1);

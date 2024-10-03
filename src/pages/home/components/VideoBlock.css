@@ -1,6 +1,5 @@
 .VideoBlock {
   min-height: 700px;
-  margin-bottom: 50px;
   background-color: var(--background-color-1);
 
   .description {

@@ -1,7 +1,6 @@
 .slopic-block {
   width: 100%;
   min-height: 600px;
-  background-color: rgb(187, 74, 74);
   position: relative;
 
   .slopic {
@@ -19,6 +18,7 @@
     width: 100cm;
     height: 600px;
     object-fit: cover;
+    z-index: -50;
   }
 
   .info-text {
