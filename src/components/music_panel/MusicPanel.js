@@ -1,28 +1,19 @@
-import useSound from "use-sound"; //для работы со звуком
-import { useState } from "react";
-import qala from "../../media/audio/09. First Transformation.mp3"
-import "./styles.css";
-import play from "../../media/icons/play_16786783.png";
+import { useEffect, useState } from "react";
+import useSound from "use-sound";
 
+import "./styles.css";
+import playIcon from "../../media/icons/play_16786783.png";
+import { BiVolumeMute } from "react-icons/bi";
+import { BsVolumeMute } from "react-icons/bs";
+import track_before from "../../media/audio/before.mp3";
+import track_after from "../../media/audio/after.mp3";
 
 const MusicPanel = () => {
+  const [isSoundBefore, setIsSoundBefore] = useState(false);
+  const [isSoundHover, setIsSoundHover] = useState(false);
 
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [play, { pause, duration, sound }] = useSound(qala);
-
-
-  const playingButton = () => {
-    if (isPlaying) {
-      pause(); // приостанавливаем воспроизведение звука
-      setIsPlaying(false);
-    } else {
-      play(); // воспроизводим аудиозапись
-      setIsPlaying(true);
-    }
-  };
-
-
-
+  const [playBefore, { pause: pauseBefore }] = useSound(track_before);
+  const [playAfter, { pause: pauseAfter }] = useSound(track_after);
 
   return (
     <div className="MusicPanel">
@@ -31,49 +22,29 @@ const MusicPanel = () => {
         <div className="progress-bpar"></div>
       </div>
       <div className="bottom-block">
-        <img className="icon-play" src={play} />
-        <div className="before-after">
-          <p className="before">before</p>
-          <p className="after">after</p>
-        </div>
-      </div>
-
-
-
-      <div className="component">
-        <h2>Playing Now</h2>
         <img
-          className="musicCover"
-          src="https://picsum.photos/200/200"
+          className="icon-play"
+          src={playIcon}
+          onMouseEnter={() => {
+            setIsSoundBefore(true);
+            playBefore();
+          }}
+          onMouseLeave={() => {
+            setIsSoundBefore(false);
+            pauseBefore();
+          }}
         />
-        <div>
-          <h3 className="title">Rubaiyyan</h3>
-          <p className="subTitle">Qala</p>
-        </div>
-        <div>
-
-          <button className="playButton">
-            Play
-          </button>
-
-          {!isPlaying ? (
-            <button className="playButton" onClick={playingButton}>
-              Play
-            </button>
-
-          ) : (
-            <button className="playButton" onClick={playingButton}>
-              Play
-            </button>
-          )}
-          <button className="playButton">
-            Play
-          </button>
+        <div className="before-after">
+          <p className="before" onClick={() => {}}>
+            before
+          </p>
+          <p className="after" onClick={() => {}}>
+            after
+          </p>
         </div>
       </div>
-      );
     </div>
   );
-}
+};
 
 export default MusicPanel;

@@ -6,6 +6,7 @@
   height: 100px;
   background-color: var(--background-color-1);
   border-radius: 20px;
+  color: white;
 
   .top-block {
     height: 20px;
@@ -25,6 +26,7 @@
     .icon-play {
       width: 36px;
       height: 36px;
+      cursor: pointer;
     }
 
     .before-after {
@@ -40,6 +42,7 @@
       width: 132px;
       height: 36px;
       border-radius: 20px 0px 0px 20px;
+      cursor: pointer;
     }
     .after {
       display: flex;
@@ -49,6 +52,7 @@
       width: 132px;
       height: 36px;
       border-radius: 0px 20px 20px 0px;
+      cursor: pointer;
     }
   }
 }
