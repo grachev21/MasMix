@@ -1,12 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
+import useSound from 'use-sound';
 import invertIcons from './Invert_no_invert';
 import day from '../../media/icons/day.png';
 import night from '../../media/icons/night.png';
 import './styles.css';
+import switchSound from '../../media/audio/knopka-klik-chetkii-blizkii-suhoi-spokoinyii.mp3';
 
 
 
 const SwitchTheme = () => {
+
+  const [play] = useSound(switchSound);
 
   const [Dark, setDark] = useState('light');
 
@@ -25,6 +29,7 @@ const SwitchTheme = () => {
   }, [Dark]);
 
   const switchDayNight = () => {
+    play()
     setDark(function(currentValue) {
       if (currentValue == 'light') {
         invertIcons('dark')
