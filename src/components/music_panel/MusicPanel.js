@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useSound from "use-sound";
 
 import "./styles.css";
@@ -6,15 +6,22 @@ import ButtonPlayStop from "../button_play_stop/ButtonPlayStop";
 import track_before from "../../media/audio/before.mp3";
 import track_after from "../../media/audio/after.mp3";
 
-const MusicPanel = () => {
-  //const control_icons = playIcon;
+const MusicPanel = ({ onChange }) => {
+  
+
   const [isSoundBefore, setIsSoundBefore] = useState("off");
   const [playBefore, { pause: pauseBefore, stop: stopBefore }] = useSound(track_before);
-
   const [isSoundAfter, setIsSoundAfter] = useState("off");
   const [playAfter, { pause: pauseAfter, stop: stopAfter }] = useSound(track_after);
 
+  const handleChange = (event) => {
+    onChange(event.target.style)
+  }
+
+
+
   const track_control = (props) => {
+
     if (props === "stop") {
       if (isSoundBefore === "on" || isSoundAfter === "on") {
         stopBefore();
@@ -52,28 +59,19 @@ const MusicPanel = () => {
     }
   };
 
-
-  useEffect(() => {
-    if (isSoundAfter === "on" || isSoundBefore === "on") {
-      //control_icons = stopIcon
-    } else {
-      //control_icons = playIcon
-    }
-  }, [isSoundBefore, isSoundAfter])
-
-
   return (
     <div className="MusicPanel">
       <div className="top-block">
         <div className="name">rock</div>
-        <div className="progress-bpar"></div>
+        <div className="progress-bar"></div>
       </div>
       <div className="bottom-block" >
-        <ButtonPlayStop onClick={() => { track_control("stop") }} />
-
+        <div onClick={() => { track_control("stop") }} onChange={handleChange}>
+          <ButtonPlayStop type={isSoundAfter == "on" || isSoundBefore == "on" ? "play" : "stop"} />
+        </div>
         <div className="before-after">
-          <p className="before" onClick={() => { track_control("before"); }}>before</p>
-          <p className="after" onClick={() => { track_control("after"); }}>after</p>
+          <p className={"before" + (isSoundBefore == "on" ? " play-before" : "")} onClick={() => { track_control("before") }}>before</p>
+          <p className={"after" + (isSoundAfter == "on" ? " play-after" : "")} onClick={() => { track_control("after") }}>after</p>
         </div>
       </div>
     </div>

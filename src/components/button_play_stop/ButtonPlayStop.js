@@ -1,10 +1,10 @@
 import "./styles.css";
 
 
-const ButtonPlayStop = ({ play, stop }) => {
+const ButtonPlayStop = ({ type }) => {
   return (
     <div className="ButtonPlayStop">
-      <div className="control-item stop"></div>
+      <div className={"control-item " + type}></div>
     </div>
   );
 }
