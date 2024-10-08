@@ -1,21 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useSound from "use-sound";
 
 import "./styles.css";
-import playIcon from "../../media/icons/play_16786783.png";
+import ButtonPlayStop from "../button_play_stop/ButtonPlayStop";
 import track_before from "../../media/audio/before.mp3";
 import track_after from "../../media/audio/after.mp3";
 
 const MusicPanel = () => {
+  //const control_icons = playIcon;
   const [isSoundBefore, setIsSoundBefore] = useState("off");
   const [playBefore, { pause: pauseBefore, stop: stopBefore }] = useSound(track_before);
 
   const [isSoundAfter, setIsSoundAfter] = useState("off");
   const [playAfter, { pause: pauseAfter, stop: stopAfter }] = useSound(track_after);
-
-  console.log("********************************************************************************")
-  console.log(isSoundAfter, "after");
-  console.log(isSoundBefore, "before");
 
   const track_control = (props) => {
     if (props === "stop") {
@@ -55,21 +52,25 @@ const MusicPanel = () => {
     }
   };
 
+
+  useEffect(() => {
+    if (isSoundAfter === "on" || isSoundBefore === "on") {
+      //control_icons = stopIcon
+    } else {
+      //control_icons = playIcon
+    }
+  }, [isSoundBefore, isSoundAfter])
+
+
   return (
     <div className="MusicPanel">
       <div className="top-block">
         <div className="name">rock</div>
         <div className="progress-bpar"></div>
       </div>
-      <div className="bottom-block">
-        <img
-          className="icon-play"
-          key="1"
-          src={playIcon}
-          onClick={() => {
-            track_control("stop");
-          }}
-        />
+      <div className="bottom-block" >
+        <ButtonPlayStop onClick={() => { track_control("stop") }} />
+
         <div className="before-after">
           <p className="before" onClick={() => { track_control("before"); }}>before</p>
           <p className="after" onClick={() => { track_control("after"); }}>after</p>
