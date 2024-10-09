@@ -8,10 +8,10 @@ import { useState } from "react";
 
 const TrackExamples = () => {
 
-  const [value, setValue] = useState(" ")
-  const handleChange = (value) => {
-    setValue(value)
-  }
+  const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount(count + 1)
+  } 
 
   console.log(value);
   return (
@@ -26,7 +26,7 @@ const TrackExamples = () => {
         С нами вы получите идеальный микс и мастер-запись для вашего будущего релиза. Мы любим доводить песни до уровня проектов из топ-чартов. Звучание захватит и впечатлит слушателей, став их любимой музыкой. Наше профессиональное сведение и мастеринг - это лучший способ для вас конкурировать в современной индустрии и вывести свою музыкальную карьеру на новый уровень. Чтобы убедиться в этом, послушайте несколько наших образцов "до" и "после":
       </div>
 
-      <MusicPanel onChange={handleChange} />
+      <MusicPanel onClick={increment} count={count} />
 
     </div>
   );
