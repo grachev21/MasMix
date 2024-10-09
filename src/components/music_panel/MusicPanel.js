@@ -6,19 +6,18 @@ import ButtonPlayStop from "../button_play_stop/ButtonPlayStop";
 import track_before from "../../media/audio/before.mp3";
 import track_after from "../../media/audio/after.mp3";
 
-const MusicPanel = ({ onClick, count }) => {
-  
+const MusicPanel = ({ onChange }) => {
+
 
   const [isSoundBefore, setIsSoundBefore] = useState("off");
   const [playBefore, { pause: pauseBefore, stop: stopBefore }] = useSound(track_before);
   const [isSoundAfter, setIsSoundAfter] = useState("off");
   const [playAfter, { pause: pauseAfter, stop: stopAfter }] = useSound(track_after);
 
+
   const handleChange = (event) => {
-    onChange(event)
+    onChange(event.target.value = "1234")
   }
-
-
 
   const track_control = (props) => {
 
@@ -59,6 +58,7 @@ const MusicPanel = ({ onClick, count }) => {
     }
   };
 
+
   return (
     <div className="MusicPanel">
       <div className="top-block">
@@ -66,16 +66,17 @@ const MusicPanel = ({ onClick, count }) => {
         <div className="progress-bar"></div>
       </div>
       <div className="bottom-block" >
-      <button >onChange</button>
-        <div onClick={() => { track_control("stop") }} >
+
+        <div onClick={(event) => { ; track_control("stop"); handleChange(event); }}>
           <ButtonPlayStop type={isSoundAfter == "on" || isSoundBefore == "on" ? "play" : "stop"} />
         </div>
+
         <div className="before-after">
           <p className={"before" + (isSoundBefore == "on" ? " play-before" : "")} onClick={() => { track_control("before") }}>before</p>
           <p className={"after" + (isSoundAfter == "on" ? " play-after" : "")} onClick={() => { track_control("after") }}>after</p>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
