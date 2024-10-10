@@ -3,14 +3,12 @@ import useSound from "use-sound";
 
 import "./styles.css";
 import ButtonPlayStop from "../button_play_stop/ButtonPlayStop";
-import track_before from "../../media/audio/before.mp3";
-import track_after from "../../media/audio/after.mp3";
 
-const MusicPanel = ({ onChange }) => {
+const MusicPanel = ({ genre, before, after, onChange}) => {
   const [isSoundBefore, setIsSoundBefore] = useState("off");
-  const [playBefore, { pause: pauseBefore, stop: stopBefore }] = useSound(track_before);
+  const [playBefore, { pause: pauseBefore, stop: stopBefore }] = useSound(before);
   const [isSoundAfter, setIsSoundAfter] = useState("off");
-  const [playAfter, { pause: pauseAfter, stop: stopAfter }] = useSound(track_after);
+  const [playAfter, { pause: pauseAfter, stop: stopAfter }] = useSound(after);
 
   const handleChange = (event) => {
     onChange((event.target.value = isSoundBefore == "on" || isSoundAfter == "on" ? "on": "off"));
@@ -57,7 +55,7 @@ const MusicPanel = ({ onChange }) => {
   return (
     <div className="MusicPanel">
       <div className="top-block">
-        <div className="name">rock</div>
+        <div className="name">{genre}</div>
         <div className="progress-bar"></div>
       </div>
       <div className="bottom-block">
