@@ -1,0 +1,29 @@
+.VideoBlock {
+  min-height: 700px;
+  background-color: var(--background-color-1);
+}
+.description {
+  color: var(--text-color-1);
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 22px;
+}
+.block_video {
+  display: flex;
+  justify-content: center;
+}
+.video {
+  width: 500px;
+  margin: 20px;
+}
+.info {
+  width: 500px;
+  height: 300px;
+  margin: 20px;
+}
+.text {
+  margin-top: 10px;
+  color: var(--text-color-1);
+}

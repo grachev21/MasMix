@@ -1,0 +1,83 @@
+.MusicPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 360px;
+  height: 100px;
+  background-color: var(--background-color-1);
+  border-radius: 20px;
+  color: white;
+}
+.top_block {
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--text-color-1);
+}
+.bottom_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 36px;
+  margin-top: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.icon_play {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+.before_after {
+  display: flex;
+  flex-direction: row;
+  color: var(--text-color-3);
+}
+.before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color-3);
+  width: 132px;
+  height: 36px;
+  border-radius: 20px 0px 0px 20px;
+  cursor: pointer;
+}
+.after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color-3);
+  width: 132px;
+  height: 36px;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
+}
+.after:hover {
+  opacity: 80%;
+  transition: opacity 0.3s;
+}
+.before:hover {
+  opacity: 80%;
+  transition: opacity 0.3s;
+}
+.play_after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  width: 132px;
+  height: 36px;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
+}
+.play_before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  width: 132px;
+  height: 36px;
+  border-radius: 20px 0px 0px 20px;
+  cursor: pointer;
+}

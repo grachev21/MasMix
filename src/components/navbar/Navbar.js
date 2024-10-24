@@ -1,41 +1,60 @@
-import "./styles.css";
-
+import styles from "./styles.module.css";
 import { NavLink } from "react-router-dom";
-import SwitchTheme from "../switch_theme/SwitchTheme";
+
 
 const Navbar = () => {
-  const activeLink = "active-link"
-  const noactiveLink = "noactive-link"
   return (
-    <nav className="nav">
-      <NavLink to="/" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
+    <nav className={styles.nav}>
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? styles.active_link: styles.noactive_link)}
+      >
         ДОМ
       </NavLink>
-      <NavLink to="/about" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
+      <NavLink
+        to="/about"
+        className={({ isActive }) => (isActive ? styles.active_link: styles.noactive_link)}
+      >
         О НАС
       </NavLink>
-      <NavLink to="/project" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
+      <NavLink
+        to="/project"
+        className={({ isActive }) => (isActive ? styles.active_link: styles.noactive_link)}
+      >
         ПРИМЕРЫ
       </NavLink>
-      <NavLink to="/project" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
+      <NavLink
+        to="/project"
+        className={({ isActive }) => (isActive ? styles.active_link: styles.noactive_link)}
+      >
         ЦЕНЫ
       </NavLink>
-      <NavLink to="/project" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
+      <NavLink
+        to="/project"
+        className={({ isActive }) => (isActive ? styles.active_link: styles.noactive_link)}
+      >
         УСЛУГИ
       </NavLink>
-      <NavLink to="/project" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
+      <NavLink
+        to="/project"
+        className={({ isActive }) => (isActive ? styles.active_link: styles.noactive_link)}
+      >
         FAQ
       </NavLink>
-      <NavLink to="/project" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
+      <NavLink
+        to="/project"
+        className={({ isActive }) => (isActive ? styles.active_link: styles.noactive_link)}
+      >
         БЛОГ
       </NavLink>
-      <NavLink to="/project" className={({ isActive }) => isActive ? activeLink : noactiveLink}>
+      <NavLink
+        to="/project"
+        className={({ isActive }) => (isActive ? styles.active_link: styles.noactive_link)}
+      >
         КОНТАКТЫ
       </NavLink>
     </nav>
-
   );
-
-}
+};
 
 export default Navbar;

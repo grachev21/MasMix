@@ -1,9 +1,9 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 
 
 const Title = ({ text }) => {
   return (
-    <div className={"Title "}>
+    <div className={styles.Title}>
       {text}
     </div>
   );

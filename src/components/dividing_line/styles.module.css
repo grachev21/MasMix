@@ -1,0 +1,23 @@
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
+.icon {
+  margin-left: 10px;
+  margin-right: 10px;
+  filter: invert(100%);
+}
+.left_line {
+  height: 1px;
+  width: 156px;
+  background-color: var(--background-color-3);
+}
+.right_line {
+  height: 1px;
+  width: 156px;
+  background-color: var(--background-color-3);
+}

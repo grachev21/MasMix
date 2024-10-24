@@ -1,17 +1,16 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 import Logo from "../logo/Logo";
 import Navbar from "../navbar/Navbar";
 import SwitchTheme from "../switch_theme/SwitchTheme";
 
 const Header = () => {
   return (
-    <div className="Header-block">
-      <div className="Header limiter">
+    <div className={styles.HeaderBlock}>
+      <div className={styles.Header}>
         <Logo />
         <Navbar />
         <SwitchTheme />
       </div>
-
     </div>
   );
 

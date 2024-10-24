@@ -1,41 +1,33 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 import back from "../../media/icons/back_3710800.png";
 import { useState, useEffect } from "react";
 
 const ButtonGreen = () => {
-
-  //В первой переменной стартовое состояние
-  // Во второй переменной функция которая меняет состояние
-  const [green, setGreen] = useState('off')
+  const [green, setGreen] = useState("off");
 
   useEffect(() => {
-    if (green === 'on') {
-      document.querySelector('.ButtonGreen> img').classList.add('shift')
+    if (green === "on") {
+      document.querySelector("." + styles.next).classList.add(styles.shift);
     }
-
-    if (green === 'off') {
-      document.querySelector('.ButtonGreen> img').classList.remove('shift')
+    if (green === "off") {
+      document.querySelector("." + styles.next).classList.remove(styles.shift);
     }
-
-  }, [green])
+  }, [green]);
 
   const onMous = () => {
-    setGreen('on')
-  }
+    setGreen("on");
+  };
 
   const offMous = () => {
-    setGreen('off')
-
-  }
+    setGreen("off");
+  };
 
   return (
-    <div className="ButtonGreen" onMouseEnter={onMous} onMouseLeave={offMous}>
-      <img src={back} />
-      <p>
-        Создать заказ
-      </p>
+    <div className={styles.ButtonGreen} onMouseEnter={onMous} onMouseLeave={offMous}>
+      <img className={styles.next} src={back} />
+      <p className={styles.text}>Создать заказ</p>
     </div>
   );
-}
+};
 
 export default ButtonGreen;

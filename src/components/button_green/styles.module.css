@@ -12,21 +12,18 @@
   margin-top: 20px;
   background-color: #6db25f;
   cursor: pointer;
-
-  p {
-    margin-left: 20px;
-  }
-
-  img {
-    height: 22px;
-    width: 22px;
-    filter: invert(100%);
-    margin-top: 1px;
-    transition: all 0.3s;
-  }
 }
-
 .shift {
   margin-right: 20px;
+  transition: all 0.3s;
+}
+.text {
+  margin-left: 20px;
+}
+.next {
+  height: 22px;
+  width: 22px;
+  filter: invert(100%);
+  margin-top: 1px;
   transition: all 0.3s;
 }

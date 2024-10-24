@@ -1,12 +1,11 @@
-import "./styles.css";
-
+import styles from "./styles.module.css";
 
 const ButtonPlayStop = ({ type }) => {
   return (
-    <div className="ButtonPlayStop">
-      <div className={"control-item " + type}></div>
+    <div className={styles.ButtonPlayStop}>
+      <div className={type ? styles.stop : styles.play}></div>
     </div>
   );
-}
+};
 
 export default ButtonPlayStop;

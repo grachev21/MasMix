@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.active_link {
+  color: var(--text-color-1);
+  padding: 4px;
+}
+
+.noactive_link {
+  color: var(--text-color-1);
+  opacity: 70%;
+  padding: 4px;
+}

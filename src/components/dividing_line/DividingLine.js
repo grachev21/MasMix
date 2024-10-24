@@ -1,16 +1,16 @@
-import icon from "../../media/icons/Mixer.png"
-import "./styles.css";
+import icon from "../../media/icons/Mixer.png";
+import styles from "./styles.module.css";
 
 const DividingLine = () => {
   return (
-    <div className={"DividingLine"}>
-      <div className="icons">
-        <div className="left-line"></div>
-        <img className="icon invert-icons" src={icon} alt="" />
-        <div className="right-line"></div>
+    <div>
+      <div className={styles.icons}>
+        <div className={styles.left_line}></div>
+        <img className={styles.icon + " invert-icons"} src={icon} alt="" />
+        <div className={styles.right_line}></div>
       </div>
     </div>
   );
-}
+};
 
 export default DividingLine;

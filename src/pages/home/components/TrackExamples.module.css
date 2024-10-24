@@ -1,0 +1,25 @@
+.track_examples {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 1110px;
+}
+.images_track_example {
+  position: absolute;
+  z-index: -50;
+  height: 1110px;
+  width: 100%;
+  object-fit: cover;
+}
+.text {
+  color: var(--text-color-1);
+}
+.track_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 500px;
+  margin-top: 100px;
+}

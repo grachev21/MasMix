@@ -118,6 +118,13 @@ body {
   width: 1140px;
 }
 
+#root {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: hidden; /*для вертикального*/
+  overflow-x: hidden; /*для горизонтального*/
+}
+
 .filter-photo {
   position: absolute;
   width: 100cm;

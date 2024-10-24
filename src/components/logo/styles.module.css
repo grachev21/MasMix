@@ -1,0 +1,23 @@
+.Logo {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  width: 110px;
+  cursor: pointer;
+}
+.logo {
+  filter: invert(100%);
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  margin-right: 4px;
+}
+.text {
+  color: var(--text-color-1);
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 4px;
+}
