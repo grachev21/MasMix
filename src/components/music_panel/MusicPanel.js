@@ -1,54 +1,51 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useSound from "use-sound";
 
 import styles from "./styles.module.css";
 import ButtonPlayStop from "../button_play_stop/ButtonPlayStop";
 
 const MusicPanel = ({ genre, before, after, onChange, getIndex, value }) => {
-  const [isSoundBefore, setIsSoundBefore] = useState("off");
+  const [isSoundBefore, setIsSoundBefore] = useState(false);
   const [playBefore, { pause: pauseBefore, stop: stopBefore }] = useSound(before);
-  const [isSoundAfter, setIsSoundAfter] = useState("off");
+  const [isSoundAfter, setIsSoundAfter] = useState(false);
   const [playAfter, { pause: pauseAfter, stop: stopAfter }] = useSound(after);
 
   const handleChange = (event) => {
-    // onChange((event.target.value = isSoundBefore == "on" || isSoundAfter == "on" ? "on" : "off"));
     onChange((event.target.value = getIndex));
   };
 
   const track_control = (props) => {
     if (props === "stop") {
-      if (isSoundBefore === "on" || isSoundAfter === "on") {
+      if (isSoundBefore || isSoundAfter) {
         stopBefore();
         stopAfter();
-        setIsSoundBefore("off");
-        setIsSoundAfter("off");
+        setIsSoundBefore(false);
+        setIsSoundAfter(false);
       } else {
         playBefore();
-        setIsSoundBefore("on");
+        setIsSoundBefore(true);
       }
     }
-
     if (props === "after") {
-      if (isSoundAfter === "on") {
+      if (isSoundAfter) {
         pauseAfter();
-        setIsSoundAfter("off");
+        setIsSoundAfter(false);
       } else {
         playAfter();
         pauseBefore();
-        setIsSoundBefore("off");
-        setIsSoundAfter("on");
+        setIsSoundBefore(false);
+        setIsSoundAfter(true);
       }
     }
-
     if (props === "before") {
-      if (isSoundBefore === "on") {
+      if (isSoundBefore) {
         pauseBefore();
-        setIsSoundBefore("off");
+        setIsSoundBefore(false);
       } else {
         playBefore();
         pauseAfter();
-        setIsSoundBefore("on");
-        setIsSoundAfter("off");
+        setIsSoundBefore(true);
+        setIsSoundAfter(false);
       }
     }
   };
@@ -65,12 +62,12 @@ const MusicPanel = ({ genre, before, after, onChange, getIndex, value }) => {
             track_control("stop");
             handleChange(event);
           }}>
-          <ButtonPlayStop type={isSoundAfter == "on" || isSoundBefore == "on" ? true : false} />
+          <ButtonPlayStop type={isSoundAfter || isSoundBefore ? true : false} />
         </div>
 
         <div className={styles.before_after}>
           <p
-            className={isSoundBefore == "on" ? styles.play_before : styles.before}
+            className={isSoundBefore ? styles.play_before : styles.before}
             onClick={(event) => {
               track_control("before");
               handleChange(event);
@@ -78,7 +75,7 @@ const MusicPanel = ({ genre, before, after, onChange, getIndex, value }) => {
             before
           </p>
           <p
-            className={isSoundAfter == "on" ? styles.play_after : styles.after}
+            className={isSoundAfter ? styles.play_after : styles.after}
             onClick={(event) => {
               track_control("after");
               handleChange(event);
@@ -87,9 +84,6 @@ const MusicPanel = ({ genre, before, after, onChange, getIndex, value }) => {
           </p>
         </div>
       </div>
-      <h1>
-        value={value}getIndex{getIndex}
-      </h1>
     </div>
   );
 };
