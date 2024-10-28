@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 360px;
+  width: 290px;
   height: 100px;
   background-color: var(--background-color-1);
   border-radius: 20px;
   color: white;
+  margin: 20px;
 }
 .top_block {
   height: 20px;
@@ -31,15 +32,17 @@
 .before_after {
   display: flex;
   flex-direction: row;
+  width: 100%;
   color: var(--text-color-3);
+  margin-left: 10px;
 }
 .before {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--background-color-3);
-  width: 132px;
-  height: 36px;
+  height: 40px;
+  width: 50%;
   border-radius: 20px 0px 0px 20px;
   cursor: pointer;
 }
@@ -48,8 +51,8 @@
   align-items: center;
   justify-content: center;
   background-color: var(--background-color-3);
-  width: 132px;
-  height: 36px;
+  height: 40px;
+  width: 50%;
   border-radius: 0px 20px 20px 0px;
   cursor: pointer;
 }

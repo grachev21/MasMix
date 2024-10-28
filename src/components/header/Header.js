@@ -6,14 +6,13 @@ import SwitchTheme from "../switch_theme/SwitchTheme";
 const Header = () => {
   return (
     <div className={styles.HeaderBlock}>
-      <div className={styles.Header}>
+      <div className={styles.Header + " limiter"}>
         <Logo />
         <Navbar />
         <SwitchTheme />
       </div>
     </div>
   );
-
-}
+};
 
 export default Header;

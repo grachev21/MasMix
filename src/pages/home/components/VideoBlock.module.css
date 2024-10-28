@@ -1,4 +1,7 @@
 .VideoBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   min-height: 700px;
   background-color: var(--background-color-1);
 }

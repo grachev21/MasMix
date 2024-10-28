@@ -11,20 +11,16 @@ const VideoBlock = () => {
     <div className={styles.VideoBlock}>
       <Title text={"MasMix - услуги по микшированию и мастерингу онлайн"} />
 
-      <div className={styles.description}>
-        Ищете услуги по микшированию и мастерингу мирового класса?
-      </div>
+      <div className={styles.description}>Ищете услуги по микшированию и мастерингу мирового класса?</div>
       <DividingLine />
-      <div className={styles.block_video}>
+      <div className={styles.block_video + " limiter"}>
         <div className="video">
           <ReactPlayer url={video} controls width={500} height={300} />
         </div>
         <div className={styles.info}>
           <div className={styles.text}>
-            Mas Mix- профессиональная студия микширования и мастеринга, имеющая
-            в своем штате опытных инженеров и соответствующее оборудование. Мы
-            окажем вам всю необходимую помощь, чтобы ваша песня или альбом
-            звучали идеально.
+            Mas Mix- профессиональная студия микширования и мастеринга, имеющая в своем штате опытных инженеров и соответствующее оборудование. Мы окажем вам всю необходимую помощь, чтобы ваша песня
+            или альбом звучали идеально.
           </div>
           <ButtonGreen />
         </div>

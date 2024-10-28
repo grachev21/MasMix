@@ -1,6 +1,7 @@
 import SlopicBlock from "./components/SlopicBlock";
 import VideoBlock from "./components/VideoBlock";
 import TrackExamples from "./components/TrackExamples";
+import OurClients from "./components/OurClients";
 
 
 
@@ -11,6 +12,7 @@ const Home = () => {
       <SlopicBlock />
       <VideoBlock />
       <TrackExamples />
+      <OurClients />
     </div>
   );
 }

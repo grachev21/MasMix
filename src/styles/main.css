@@ -114,22 +114,10 @@ body {
   font-style: normal;
 }
 
-.limiter {
-  width: 1140px;
-}
 
 #root {
   width: 100%;
   overflow: hidden;
   overflow-y: hidden; /*для вертикального*/
   overflow-x: hidden; /*для горизонтального*/
-}
-
-.filter-photo {
-  position: absolute;
-  width: 100cm;
-  height: 100%;
-  background-color: var(--background-color-1);
-  opacity: 60%;
-  z-index: -1;
 }

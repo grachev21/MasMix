@@ -14,6 +14,15 @@ const MusicPanel = ({ genre, before, after, onChange, getIndex, value }) => {
     onChange((event.target.value = getIndex));
   };
 
+  useEffect(() => {
+    if (value != getIndex) {
+      stopBefore();
+      stopAfter();
+      setIsSoundBefore(false);
+      setIsSoundAfter(false);
+    }
+  });
+
   const track_control = (props) => {
     if (props === "stop") {
       if (isSoundBefore || isSoundAfter) {

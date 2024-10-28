@@ -31,7 +31,7 @@
   height: 28px;
   background-color: var(--background-color-1);
   border-radius: 50%;
-  top: 1.2px;
+  top: 50%;
   left: 1.3px;
   transition: 0.3s;
   opacity: 70%;
