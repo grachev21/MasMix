@@ -32,9 +32,11 @@
   background-color: var(--background-color-1);
   border-radius: 50%;
   top: 50%;
+  transform: translate(0, -50%);
   left: 1.3px;
   transition: 0.3s;
   opacity: 70%;
+
 }
 
 .ball_white {

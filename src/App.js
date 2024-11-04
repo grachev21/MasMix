@@ -1,91 +1,27 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import ScrollToTop from "./utils/scrollToTop";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./utils/scrollToTop";
+import "./styles/main.css";
+import "./styles/color.css";
+import "./styles/settings.css";
+import Header from "./components/header/Header";
+import Project from "./pages/Project";
+import Home from "./pages/home/Home";
+import About from "./pages/About";
 
-// import "./styles/main.css";
-// import "./styles/color.css";
-// import "./styles/settings.css";
-
-// import Header from "./components/header/Header";
-
-// import Project from "./pages/Project";
-// import Home from "./pages/home/Home";
-// import About from "./pages/About";
-
-
-
-
-
-import React from 'react';
-import { Flex, Layout } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
-const headerStyle = {
-  textAlign: 'center',
-  color: '#fff',
-  height: 64,
-  paddingInline: 48,
-  lineHeight: '64px',
-  backgroundColor: '#4096ff',
+const App = () => {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <ScrollToTop />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 };
-const contentStyle = {
-  textAlign: 'center',
-  minHeight: 120,
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#0958d9',
-};
-const siderStyle = {
-  textAlign: 'center',
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#1677ff',
-};
-const footerStyle = {
-  textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#4096ff',
-};
-const layoutStyle = {
-  borderRadius: 8,
-  overflow: 'hidden',
-  width: 'calc(50% - 8px)',
-  maxWidth: 'calc(50% - 8px)',
-};
-const App = () => (
-  <Flex gap="middle" wrap>
 
-    <Layout style={layoutStyle}>
-      <Header style={headerStyle}>Header</Header>
-      <Layout>
-        <Content style={contentStyle}>Content</Content>
-        <Sider width="25%" style={siderStyle}>
-          Sider
-        </Sider>
-      </Layout>
-      <Footer style={footerStyle}>Footer</Footer>
-    </Layout>
-
-  </Flex>
-);
 export default App;
-
-
-
-
-
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <BrowserRouter>
-//         <ScrollToTop />
-//         <Header />
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/project" element={<Project />} />
-//           <Route path="/about" element={<About />} />
-//         </Routes>
-//       </BrowserRouter>
-//     </div>
-//   );
-// };
-
-// export default App;

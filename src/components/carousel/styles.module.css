@@ -1,0 +1,62 @@
+.carousel {
+  width: 1080px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background-color: azure;
+}
+.line {
+  position: absolute;
+  display: flex;
+  left: 0px;
+  transition: 0.5s;
+}
+.picture {
+  width: 360px;
+  height: 180px;
+}
+.link_collections {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.Dot {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.dot {
+  width: 10px;
+  margin: 10px;
+  height: 10px;
+  display: flex;
+  bottom: -20px;
+  transform: translate(-50%);
+  cursor: pointer;
+  background-color: blue;
+  border-radius: 50%;
+}
+.next-button {
+  position: absolute;
+  height: 39px;
+  top: 150px;
+  right: 40px;
+  background-color: var(--button-1);
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 50;
+}
+.back_button {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  background-color: var(--button-1);
+  border-radius: 20px;
+  transform: rotate(180deg);
+  cursor: pointer;
+  z-index: 50;
+}

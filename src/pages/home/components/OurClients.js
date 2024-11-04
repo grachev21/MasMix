@@ -1,6 +1,7 @@
 import Title from "../../../components/title/Title";
 import DividingLine from "../../../components/dividing_line/DividingLine";
 import styles from "./OurClients.module.css";
+import Carousel from "../../../components/carousel/Carousel";
 
 const OurClients = () => {
   return (
@@ -11,6 +12,7 @@ const OurClients = () => {
         Мы предоставили услуги по микшированию и мастерингу в режиме онлайн большому количеству музыкантов и их лейблам. Некоторые из наших клиентов работают с этими компаниями. Вы можете быть
         уверены, что вашу музыку совершенствуют мастера.
       </p>
+      <Carousel />
     </div>
   );
 };
