@@ -1,33 +1,34 @@
 import styles from "./styles.module.css";
 import carouselList from "../../helpers/carouselList";
 import Dot from "./Dot";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Carousel = () => {
   const widthCarousel = 1080;
   const widthPicture = 360;
   const quantityPicture = Object.keys(carouselList).length;
-  const numberPoints = quantityPicture - widthCarousel / widthPicture; 
-  const listPoints = []
-  // const [isPosition, setPosition] = useState(0);
-  // const [isIndex, setIndex] = useState(0);
+  const numberPoints = quantityPicture - widthCarousel / widthPicture;
+  const listPoints = [];
+  const [isPosition, setPosition] = useState(0);
 
   // Receives data from the child
-  const [isValue, setValue] = useState("");
+  const [isIndex, setIndex] = useState(0);
   const handleChange = (isValue) => {
-    setValue(isValue);
-    console.log(isValue);
+    setIndex(isValue);
   };
 
   for (let index = 0; index < numberPoints; index++) {
-    listPoints.push(index*widthPicture)
+    listPoints.push(index * widthPicture);
   }
 
   console.log(listPoints);
+  useEffect(() => {
+    setPosition(listPoints[isIndex])
+  })
 
   return (
     <div className={styles.carousel} style={{ width: `${widthCarousel}px` }}>
-      <div className={styles.line}>
+      <div className={styles.line} style={{left: `-${isPosition}px`}}>
         {carouselList.map((carouselList, index) => {
           return <img key={index} className={styles.picture} style={{ width: `${widthPicture}` }} src={carouselList.img}></img>;
         })}
