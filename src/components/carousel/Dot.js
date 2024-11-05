@@ -1,23 +1,9 @@
-import { useEffect } from "react";
 import styles from "./styles.module.css";
-import carouselList from "../../helpers/carouselList";
 
-const Dot = ({ number }) => {
-
-  useEffect(() => {
-    const size_picture = document.querySelector("." + styles.picture).offsetWidth;
-    const size_line = document.querySelector("." + styles.carousel).offsetWidth;
-    console.log(size_line, size_picture);
-    console.log(Object.keys(carouselList).length);
-  });
-
-  let dots = [];
-  for (let i = 1; i <= number; i++) {
-    dots.push(i);
-  }
-
-  const DotClick = (index) => {
-    console.log();
+const Dot = ({ number, onChange }) => {
+  const dots = [...Array(number).keys()];
+  const handleChange = (event, getIndex) => {
+    onChange((event.target.value = getIndex));
   };
 
   return (
@@ -26,8 +12,8 @@ const Dot = ({ number }) => {
         return (
           <p
             key={index}
-            onClick={() => {
-              DotClick(index);
+            onClick={(event) => {
+              handleChange(event, index);
             }}
             className={styles.dot}></p>
         );
@@ -35,5 +21,4 @@ const Dot = ({ number }) => {
     </div>
   );
 };
-
 export default Dot;
