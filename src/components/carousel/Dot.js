@@ -1,10 +1,21 @@
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 
 const Dot = ({ number, onChange }) => {
+  const [isDot, setDot] = useState(0);
   const dots = [...Array(number).keys()];
   const handleChange = (event, getIndex) => {
     onChange((event.target.value = getIndex));
   };
+
+  useEffect(() => {
+    const dots = [...document.querySelectorAll("." + styles.dot)];
+    dots.map((dots, index) => {
+      console.log(dots);
+      console.log(index);
+      index === isDot ? dots.setAttribute("style", "background-color: var(--background-2;") : dots.removeAttribute("style");
+    });
+  });
 
   return (
     <div className={styles.Dot}>
@@ -14,8 +25,10 @@ const Dot = ({ number, onChange }) => {
             key={index}
             onClick={(event) => {
               handleChange(event, index);
+              setDot(index);
             }}
-            className={styles.dot}></p>
+            className={styles.dot}
+            style={{ background: "var()" }}></p>
         );
       })}
     </div>
