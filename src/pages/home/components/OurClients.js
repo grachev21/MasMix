@@ -2,6 +2,7 @@ import Title from "../../../components/title/Title";
 import DividingLine from "../../../components/dividing_line/DividingLine";
 import styles from "./OurClients.module.css";
 import Carousel from "../../../components/carousel/Carousel";
+import ButtonBlue from "../../../components/button_blue/ButtonBlue";
 
 const OurClients = () => {
   return (
@@ -13,6 +14,7 @@ const OurClients = () => {
         уверены, что вашу музыку совершенствуют мастера.
       </p>
       <Carousel />
+      <ButtonBlue text={"Что то Там"} />
     </div>
   );
 };

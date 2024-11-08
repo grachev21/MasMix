@@ -1,20 +1,33 @@
+import { useState, useEffect, useRef } from "react";
 import trackList from "../../../helpers/trackList.js";
 import styles from "./TrackExamples.module.css";
 import images_track_example from "../../../media/images/SAMPLES-BLOCK-BACKGROUND-2.jpg";
 import DividingLine from "../../../components/dividing_line/DividingLine.js";
 import Title from "../../../components/title/Title.js";
 import MusicPanel from "../../../components/music_panel/MusicPanel";
-import { useState } from "react";
+import BackgroundImage from "../../../components/background_image/BackgroundImage.js";
 
 const TrackExamples = () => {
+  const myRef = useRef();
+  const [myElementIsVisible, setMyElementIsVisible] = useState();
   const [value, setValue] = useState("");
+
   const handleChange = (value) => {
     setValue(value);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(myRef.current);
+  }, []);
+
+  console.log(myElementIsVisible);
   return (
-    <div className={styles.track_examples}>
-      <img className={styles.images_track_example} src={images_track_example}></img>
+    <div ref={myRef} className={styles.track_examples}>
+      <BackgroundImage image={images_track_example} block={myElementIsVisible ? "TrackExamples" : ""} />
       <div className="filter-photo"></div>
       <Title text={"СВЕДЕНИЕ И МАСТЕРИНГ ПРИМЕРЫ"} color={"white"} />
       <DividingLine type={"invert"} />

@@ -11,9 +11,7 @@ const Dot = ({ number, onChange }) => {
   useEffect(() => {
     const dots = [...document.querySelectorAll("." + styles.dot)];
     dots.map((dots, index) => {
-      console.log(dots);
-      console.log(index);
-      index === isDot ? dots.setAttribute("style", "background-color: var(--background-2;") : dots.removeAttribute("style");
+      index === isDot ? dots.setAttribute("style", "background-color: var(--button-color-1)") : dots.removeAttribute("style");
     });
   });
 

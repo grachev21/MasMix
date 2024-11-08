@@ -11,13 +11,13 @@
   margin-right: 10px;
   filter: invert(100%);
 }
-.left_line {
+.line_long {
   height: 1px;
   width: 156px;
   background-color: var(--background-color-3);
+  transition: width 3s;
 }
-.right_line {
+.line_short {
   height: 1px;
-  width: 156px;
-  background-color: var(--background-color-3);
+  width: 16px;
 }

@@ -1,4 +1,5 @@
 import styles from "./SlopicBlock.module.css";
+import BackgroundImage from "../../../components/background_image/BackgroundImage";
 
 import headerPhoto from "../../../media/images/HEADER-PHOTO.jpg";
 import icons_list from "../../../media/icons/achievement.png";
@@ -8,7 +9,7 @@ const SlopicBlock = () => {
   return (
     <div className={styles.slopic_block}>
       <div className={styles.slopic}></div>
-      <img className={styles.header_photo} src={headerPhoto} alt="" />
+      <BackgroundImage image={headerPhoto} />
       <div className="filter-photo"></div>
       <div className={styles.info_text}>
         <div className={styles.text}>
@@ -22,35 +23,19 @@ const SlopicBlock = () => {
 
           <div className={styles.list_achievements}>
             <ul className={styles.achievement}>
-              <img
-                className={styles.icons_list + " dont-invert-icons"}
-                src={icons_list}
-                alt=""
-              />
+              <img className={styles.icons_list + " dont-invert-icons"} src={icons_list} alt="" />
               <p>Лучшие звукорежиссеры</p>
             </ul>
             <ul className={styles.achievement}>
-              <img
-                className={styles.icons_list + " dont-invert-icons"}
-                src={icons_list}
-                alt=""
-              />
+              <img className={styles.icons_list + " dont-invert-icons"} src={icons_list} alt="" />
               <p>Опыт более 10 лет</p>
             </ul>
             <ul className={styles.achievement}>
-              <img
-                className={styles.icons_list + " dont-invert-icons"}
-                src={icons_list}
-                alt=""
-              />
+              <img className={styles.icons_list + " dont-invert-icons"} src={icons_list} alt="" />
               <p>Опыт работы с гос заказами</p>
             </ul>
             <ul className={styles.achievement}>
-              <img
-                className={styles.icons_list + " dont-invert-icons"}
-                src={icons_list}
-                alt=""
-              />
+              <img className={styles.icons_list + " dont-invert-icons"} src={icons_list} alt="" />
               <p>Гарантия качества</p>
             </ul>
           </div>

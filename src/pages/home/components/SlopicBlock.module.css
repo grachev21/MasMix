@@ -1,23 +1,16 @@
 .slopic_block {
   width: 100%;
-  min-height: 600px;
+  height: 800px;
   position: relative;
 }
 .slopic {
   position: absolute;
-  min-height: 600px;
+  height: 100%;
   width: 50%;
   background: var(--background-color-1);
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
   z-index: 1;
   opacity: 50%;
-}
-.header_photo {
-  position: absolute;
-  width: 100cm;
-  height: 600px;
-  object-fit: cover;
-  z-index: -50;
 }
 .info_text {
   display: flex;

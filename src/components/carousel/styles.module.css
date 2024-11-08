@@ -29,14 +29,14 @@
   transform: translate(-50%, 0);
 }
 .dot {
-  width: 10px;
-  margin: 10px;
-  height: 10px;
+  width: 8px;
+  margin: 8px;
+  height: 8px;
   display: flex;
   bottom: -20px;
   transform: translate(-50%);
   cursor: pointer;
-  background-color: var(--button-color-1);
+  background-color: var(--hover-color-1);
   border-radius: 50%;
 }
 .next-button {

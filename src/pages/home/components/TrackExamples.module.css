@@ -5,16 +5,9 @@
   position: relative;
   height: 1110px;
 }
-.images_track_example {
-  position: absolute;
-  z-index: -50;
-  height: 1110px;
-  width: 100%;
-  object-fit: cover;
-}
 .text {
   color: var(--text-color-1);
-  font-size: 18px;  
+  font-size: 18px;
 }
 .track_list {
   display: flex;

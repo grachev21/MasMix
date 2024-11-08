@@ -1,0 +1,11 @@
+.ButtonBlue {
+  background-color: var(--button-color-1);
+  border-radius: 30px;
+  cursor: pointer;
+}
+.text {
+  padding: 10px 30px;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-color-1);
+}
