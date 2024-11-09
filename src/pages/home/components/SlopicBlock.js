@@ -1,15 +1,26 @@
 import styles from "./SlopicBlock.module.css";
-import BackgroundImage from "../../../components/background_image/BackgroundImage";
 
-import headerPhoto from "../../../media/images/HEADER-PHOTO.jpg";
+import imagesSlopicBlock from "../../../media/images/HEADER-PHOTO.jpg";
 import icons_list from "../../../media/icons/achievement.png";
 import icons_logo from "../../../media/icons/Mixer.png";
+import { useState, useEffect, useRef } from "react";
 
 const SlopicBlock = () => {
+  const myRef = useRef();
+  const [myElementIsVisible, setMyElementIsVisible] = useState();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(myRef.current);
+  }, []);
+
   return (
-    <div className={styles.slopic_block}>
+    <div ref={myRef} className={styles.slopic_block}>
+      <img className={myElementIsVisible ? styles.on : styles.off} src={imagesSlopicBlock}></img>
       <div className={styles.slopic}></div>
-      <BackgroundImage image={headerPhoto} />
       <div className="filter-photo"></div>
       <div className={styles.info_text}>
         <div className={styles.text}>

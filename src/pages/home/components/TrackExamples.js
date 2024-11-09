@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import trackList from "../../../helpers/trackList.js";
 import styles from "./TrackExamples.module.css";
-import images_track_example from "../../../media/images/SAMPLES-BLOCK-BACKGROUND-2.jpg";
+import imagesTrackExample from "../../../media/images/SAMPLES-BLOCK-BACKGROUND-2.jpg";
 import DividingLine from "../../../components/dividing_line/DividingLine.js";
 import Title from "../../../components/title/Title.js";
 import MusicPanel from "../../../components/music_panel/MusicPanel";
-import BackgroundImage from "../../../components/background_image/BackgroundImage.js";
 
 const TrackExamples = () => {
   const myRef = useRef();
@@ -27,7 +26,7 @@ const TrackExamples = () => {
   console.log(myElementIsVisible);
   return (
     <div ref={myRef} className={styles.track_examples}>
-      <BackgroundImage image={images_track_example} block={myElementIsVisible ? "TrackExamples" : ""} />
+      <img className={myElementIsVisible ? styles.on: styles.off} src={imagesTrackExample}></img>
       <div className="filter-photo"></div>
       <Title text={"СВЕДЕНИЕ И МАСТЕРИНГ ПРИМЕРЫ"} color={"white"} />
       <DividingLine type={"invert"} />
